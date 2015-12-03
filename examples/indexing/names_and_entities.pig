@@ -16,7 +16,8 @@ SET default_parallel $DEFAULT_PARALLEL
 SET pig.tmpfilecompression true;
 SET pig.tmpfilecompression.codec gz;
 
-SET io.sort.mb 1024
+-- SET io.sort.mb 1024
+SET mapred.child.java.opts '-Xmx2048m';
 
 -- Make Hadoop a bit more failure-resistant
 SET mapred.skip.mode.enabled true;
